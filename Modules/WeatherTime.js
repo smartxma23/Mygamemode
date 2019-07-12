@@ -11,7 +11,7 @@ mp.events.addCommand('setweather',(player,fulltext,weatherType) => {
 
 
 });
-
+/*
 mp.events.addCommand('settime',(player,fulltext,a,b,c) => {
     var hours = Number(a);
     var minutes = Number(b);
@@ -24,3 +24,4 @@ mp.events.addCommand('settime',(player,fulltext,a,b,c) => {
     mp.world.time.minute = minutes;
     mp.world.time.second = seconds;
 });
+*/

@@ -69,7 +69,7 @@ mp.events.addCommand("weapon", (player, fullText, weapon, ammo) => {
 	let weaponHash = mp.joaat(weapon);
 	player.giveWeapon(weaponHash, parseInt(ammo) || 10000);
 });
-
+/*
 mp.events.addCommand('giveweapon', (player, fullText, abc, bcd) => {
     var hash = Number(abc);
     var ammo = Number(bcd);
@@ -81,3 +81,4 @@ mp.events.addCommand('giveweapon', (player, fullText, abc, bcd) => {
 }); 
 
 mp.events.addcommand()
+*/
