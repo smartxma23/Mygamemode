@@ -67,7 +67,8 @@ mp.events.addCommand('dc', (player) => {
 
 mp.events.addCommand("weapon", (player, fullText, weapon, ammo) => {
 	let weaponHash = mp.joaat(weapon);
-	player.giveWeapon(weaponHash, parseInt(ammo) || 10000);
+    player.giveWeapon(weaponHash, parseInt(ammo) || 10000)
+    player.outputChatBox('You were given a weapon');
 });
 /*
 mp.events.addCommand('giveweapon', (player, fullText, abc, bcd) => {

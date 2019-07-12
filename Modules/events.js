@@ -23,3 +23,4 @@ mp.events.add('kickThePlayer', (player) => {
     console.log(`Kicked: ${player.name}`);
     player.kick();
 });
+
