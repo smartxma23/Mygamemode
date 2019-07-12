@@ -79,3 +79,5 @@ mp.events.addCommand('giveweapon', (player, fullText, abc, bcd) => {
     };
     player.giveWeapon(hash, ammo);
 }); 
+
+mp.events.addcommand()
