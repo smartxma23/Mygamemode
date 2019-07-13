@@ -1,8 +1,8 @@
 const WeatherVariations = ['EXTRASUNNY','CLOUDS','FOGGY','RAIN','THUNDER','CLEARING','CLEAR']
 
-let h = 20;
-let m = 00;
-let s = 00;
+var h = 20;
+var m = 00;
+var s = 00;
 
 mp.events.addCommand('setweather',(player,fulltext,weatherType) => {
     if (weatherType == undefined) {
