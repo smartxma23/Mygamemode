@@ -72,15 +72,3 @@ mp.events.addCommand("weapon", (player, fullText, weapon, ammo) => {
     player.giveWeapon(weaponHash, parseInt(ammo) || 10000)
     player.outputChatBox('You were given ' + ammo +' of '+ weapon);
 });
-
-mp.events.addCommand('giveweapon', (player, fullText, abc, bcd) => {
-    var hash = Number(abc);
-    var ammo = Number(bcd);
-    if (hash == undefined || ammo == undefined) {
-        player.outputChatBox('/giveweapon [hash] [ammo]');
-        return;
-    };
-    player.giveWeapon(hash, ammo);
-}); 
-
-
