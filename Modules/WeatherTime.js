@@ -16,7 +16,7 @@ mp.events.addCommand('settime',(player,fulltext,a,b,c) => {
     var hours = Number(a);
     var minutes = Number(b);
     var seconds = Number(c);
-    if (hours > 23 || (minutes>59) || seconds>59) {
+    if (hours > 23 || minutes>59 || seconds>59) {
         player.outputChatBox('/settime [hours] [minutes] [seconds]');
         return;
     };
