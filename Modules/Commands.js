@@ -11,11 +11,13 @@ mp.events.addCommand(`tp`, (player,fullText, x, y, z) => {
     player.outputChatBox(`You've been teleported.`);
     player.position = new mp.Vector3(parsefloat(x), parsefloat(y), parsefloat(z));
 });
+
 mp.events.addCommand('kill', (player) => {
     player.health = 0;
     player.outputChatBox(`/kill`);
     player.outputChatBox(`You have been killed.`);
 });
+
 mp.events.addCommand('hp', (player) => {
     if (player.health == 0) {
         pos = player.position;
