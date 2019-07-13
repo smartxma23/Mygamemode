@@ -6,10 +6,13 @@ mp.events.addCommand(`tp`, (player,fullText, x, y, z) => {
     if (x == undefined || y == undefined || z == undefined) {
         player.outputChatBox(`/tp [x] [y] [z]`);
         return;
-    }
-
+    };
+    fx = parsefloat(x);
+    fy = parsefloat(y);
+    fz = parsefloat(z);
+    console.log('${fx}, ${fy} ,${fz}');
+    player.position = new mp.Vector3(fx,fy,fz);
     player.outputChatBox(`You've been teleported.`);
-    player.position = new mp.Vector3(parsefloat(x), parsefloat(y), parsefloat(z));
 });
 
 mp.events.addCommand('kill', (player) => {
