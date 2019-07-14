@@ -56,6 +56,7 @@ function timeUpdates() {
         m = 0;
         s = 0;
     };
+    s += 1;
     mp.world.time.set(h,m,s);  
 };
 
