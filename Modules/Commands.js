@@ -67,6 +67,18 @@ mp.events.addCommand('spawncar', (player, fullText, vehicleType) => {
     player.setVariable('PersonalVehicle', spawnedVehicle);
 });
 
+mp.events.addCommand(`doors`, 
+	(player) => {
+		let vehicle = player.vehicle;
+		if (!!vehicle) {
+			let newState = !vehicle.locked;
+			vehicle.locked = newState;
+			player.outputChatBox(`Your vehicle doors now <b>${newState ? `closed` : `opened`}</b>`);
+		};
+	}
+);
+
+
 mp.events.addCommand('dc', (player) => {
     mp.events.call('kickThePlayer', player);
 });
