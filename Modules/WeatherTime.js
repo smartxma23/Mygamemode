@@ -42,7 +42,6 @@ setInterval(() => {
 },1000);
 
 function timeUpdates() {
-    mp.world.time.set(h,m,s);
     if (s>59) {
         m += 1;
         s = 0
@@ -56,6 +55,7 @@ function timeUpdates() {
         h = 0;
         m = 0;
         s = 0;
-    };    
+    };
+    mp.world.time.set(h,m,s);  
 };
 

@@ -8,9 +8,9 @@ mp.events.addCommand(`tp`, (player,fullText, x, y, z) => {
         player.outputChatBox(`/tp [x] [y] [z]`);
         return;
     };
-    fx = parseFloat(x);
-    fy = parseFloat(y);
-    fz = parseFloat(z);
+    var fx = parseFloat(x);
+    var fy = parseFloat(y);
+    var fz = parseFloat(z);
     console.log('${fx}, ${fy} ,${fz}');
     player.position = new mp.Vector3(fx,fy,fz);
     player.outputChatBox(`You've been teleported.`);
