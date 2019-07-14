@@ -18,4 +18,12 @@ mp.events.add('playerEnterColshape', (player, colshape) => {
     player.setVariable('PersonalVehicle', spawnedVehicle);
 });
 
+let medicalBlip = mp.blips.new(61, new mp.Vector3(360, -589, 0),
+    {
+        name: 'Los Santos Medical Departement',
+        color: 1,
+        shortRange: true,
+});
+
+
 //ignore
