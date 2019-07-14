@@ -17,3 +17,5 @@ mp.events.add('playerEnterColshape', (player, colshape) => {
     var spawnedVehicle = mp.vehicles.new(mp .joaat('ambulance'), player.position);
     player.setVariable('PersonalVehicle', spawnedVehicle);
 });
+
+//ignore
