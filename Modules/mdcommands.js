@@ -9,6 +9,9 @@ generateColShapes();
 
 mp.events.add('playerEnterColshape', (player, colshape) => {
     var currentVehicle = colshape.getVariable('PersonalVehicle');
-    if  ( currentVehicle == null) return;
+    if  ( currentVehicle == null) 
+    return;
+    var spawnedVehicle = mp.vehicles.new(mp .joaat(vehicleType), player.position)
+    player.setVariable('PersonalVehicle', spawnedVehicle);
     player.outputChatBox('you just got your Ambulance')
 });
