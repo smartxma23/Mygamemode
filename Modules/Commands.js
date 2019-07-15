@@ -89,4 +89,7 @@ mp.events.addCommand("weapon", (player, fullText, weapon, ammo) => {
     player.outputChatBox('You were given ' + ammo +' of '+ weapon);
 });
 
-//ignore
+mp.events.addCommand('ping', (player) => {
+    let ping = player.ping;
+    player.outputChatBox('Ping is currently ${ping} ms');
+});
