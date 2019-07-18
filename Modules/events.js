@@ -52,7 +52,7 @@ function playerQuit(player,exitType,reason){
         };
     });
 };
-mp.events.add('playerQuit', (player, exitType, reason));
+mp.events.add('playerQuit', playerQuit(player, exitType, reason));
 
 
 mp.events.add("pointingStop", (player) => {
