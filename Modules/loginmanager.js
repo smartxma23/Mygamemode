@@ -1,4 +1,4 @@
-const mysqlc = require('./mySql');
+/*const mysqlc = require('./mySql');
 // Work in progress 
 mp.events.add('playerReady', (player) => {
     player.dimension = 2 
@@ -51,4 +51,4 @@ mp.events.addCommand('login',(player,fullText,name,password) =>{
         });
 
     };
-});
+}); */
