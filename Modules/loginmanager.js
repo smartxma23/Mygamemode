@@ -42,5 +42,13 @@ mp.events.addCommand('login',(player,fullText,name,password) =>{
         let pos = result[0].position.split(',');
         player.position = new mp.Vector3(parseFloat(pos[0]),parseFloat(pos[1]),parseFloat(pos[2]));
         player.name = name ;
+        let playerid = player.id;
+        let sql = 'UPDATE players SET game_id = ${playerid} WHERE name = ${name};'
+        mysqlc.query(sql, function (err, result){
+            if (err) {
+            throw err;
+            };
+        });
+
     };
 });
