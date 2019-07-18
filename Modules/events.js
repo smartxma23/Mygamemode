@@ -16,17 +16,12 @@ mp.events.add('kickThePlayer', (player) => {
 });
 
 
-
-
-function playerSpawn(player) {
+mp.events.add('playerSpawn', (player) => {
     player.outputChatBox('You have spawned.');
-};
-
-mp.events.add('playerSpawn', playerSpawn);
+});
 
 
-
-function playerQuit(player,exitType,reason){
+mp.events.add('playerQuit',(player, exitType, reason) =>{
     var currentVehicle = player.getVarible('PersonalVehicle');
     
     if (currentVehicle == null) return;
@@ -51,9 +46,8 @@ function playerQuit(player,exitType,reason){
             throw err;
         };
     });
-};
-mp.events.add('playerQuit', playerQuit(player, exitType, reason));
 
+});
 
 mp.events.add("pointingStop", (player) => {
     player.stopAnimation();
