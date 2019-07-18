@@ -16,7 +16,7 @@ mysqlc.connect(function(e) {
 });
 
 // Players Table Creation (Use one time)
-var sql = "CREATE TABLE players (db_id INT AUTOINCREMENT, name TEXT, password TEXT, position TEXT DEFAULT '38,16,70', money INT DEFAULT 2000, PRIMARY KEY(name,passowrd)";
+var sql = "CREATE TABLE players (db_id INT AUTOINCREMENT,game_id INT DEFAULT 0, name TEXT, password TEXT, position TEXT DEFAULT '38,16,70', money INT DEFAULT 2000,health INT DEFAULT 100, rank TEXT DEFAULT 'player', PRIMARY KEY(name,passowrd)";
 mysqlc.query(sql, function (err, result) {
     if (err) {
         throw err;
