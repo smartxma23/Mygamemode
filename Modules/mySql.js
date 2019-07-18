@@ -1,10 +1,11 @@
 // Create Connection
 var mysql = require('mysql');
 var mysqlc = mysql.createConnection({
-    host:'127.0.0.1',// host of server
-    user:'ADMIN',// MySQL user
-    password:'PASSWORD',// MySQL password
-    database:'SERVER_TEST'// MySQL database
+    host:'127.0.0.1',// host of server 
+    port: '22006',
+    user:'kostya_nad',// MySQL user
+    password:'MyStrongPassword',// MySQL password
+    database:'gmgta'// MySQL database
 });
 
 // Connection 
