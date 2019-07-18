@@ -1,4 +1,5 @@
 // Create Connection
+var mysql = require('mysql');
 var mysqlc = mysql.createConnection({
     host:'127.0.0.1',// host of server
     user:'ADMIN',// MySQL user
