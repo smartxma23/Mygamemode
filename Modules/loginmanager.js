@@ -1,12 +1,12 @@
 const mysqlc = require('./mySql');
 // Work in progress 
-mp.events.add('playerReady', (player) => {
+/*mp.events.add('playerReady', (player) => {
     player.dimension = 2 
     player.outputChatBox('Welcome to the server!');
     player.playAnimation('mp_arresting', 'idle', 1, 49)
 
 });
-
+*/
 // Work in progress
 mp.events.addCommand("register", (player, fullText, name, passone, passtwo) => {
 	if (name == undefined || passone == undefined || passtwo == undefined){

@@ -14,7 +14,7 @@ mysqlc.connect(function(e) {
         console.log("Error connecting to the database with error "+e);
     } else {
         console.log('Database connected!');
-    }
+    };
 });
 
 //Players Table Creation (Use one time)
