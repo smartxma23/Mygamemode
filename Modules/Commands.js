@@ -100,18 +100,28 @@ mp.events.addCommand('hp', (player) => {
 });
 
 
-mp.events.addCommand('getrank',(player,fullText,pid) => {
-    let name = player.name;
-    let sql = 'SELECT rank FROM players WHERE name is ${name}';
-    mysqlc.query(sql, function (err, result){
-        if (err) {
-            throw err;
-        };
-    });
-});
-
-mp.events.addCommand('getid',(player,fullText) => {
-
+mp.events.addCommand('getrank',(player,pname) => {
+    if (pname != undefined){
+        let sql = 'SELECT rank FROM players WHERE name is ${pname}';
+        mysqlc.query(sql, function (err, result){
+            if (err) {
+                throw err;
+            };
+        });
+        let rank = result[0].rank;
+        player.outputChatBox('Rank of ${pname} is : ${rank}');
+    }
+    else {
+        let name = player.name;
+        let sql = 'SELECT rank FROM players WHERE name is ${name}';
+        mysqlc.query(sql, function (err, result){
+            if (err) {
+                throw err;
+            };
+        });
+        let rank = result[0].rank;
+        player.outputChatBox('Your rank is : ${rank}');
+    };
     
 });
 
