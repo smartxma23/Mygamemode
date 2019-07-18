@@ -36,8 +36,8 @@ mp.events.addCommand('dc', (player) => {
 });
 
 mp.events.addCommand('ping', (player) => {
-    let ping = player.ping;
-    player.outputChatBox('Ping is currently ${ping} ms');
+    var  p = player.ping;
+    player.outputChatBox('Ping is currently ${p} ms');
 });
 
 
